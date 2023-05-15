@@ -10,6 +10,11 @@ import {
   gql,
 } from "@apollo/client";
 
+const client = new ApolloClient({
+  uri: "https://flyby-router-demo.herokuapp.com/",
+  cache: new InMemoryCache(),
+});
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
